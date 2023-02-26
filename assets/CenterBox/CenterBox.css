@@ -1,0 +1,11 @@
+.centerbox {
+    border: 1px none yellow;
+    /* height: 500px; */
+    /* width: 100%; */
+    /* background-color: rgb(29, 29, 33); */
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: space-around;
+
+}

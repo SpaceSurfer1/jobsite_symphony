@@ -1,0 +1,11 @@
+.top-options-box{
+    border: 1px none grey;
+}
+.top-options-box a{
+    text-decoration: none;
+    list-style-type: none;
+    color: lightgrey;
+    margin: 0px 10px 0px 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
