@@ -1,3 +1,4 @@
+import React from 'react';
 import './TopOptionsBox.css';
 function TopOptionsBox() {
     return(

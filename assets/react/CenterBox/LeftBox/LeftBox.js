@@ -1,3 +1,4 @@
+import React from 'react';
 import './LeftBox.css';
 function LeftBox() {
     return(

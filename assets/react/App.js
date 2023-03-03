@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import BottomBox from './BottomBox/BottomBox';
 import CenterBox from './CenterBox/CenterBox';

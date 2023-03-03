@@ -1,3 +1,4 @@
+import React from 'react';
 import './CenterBox.css';
 import LeftBox from './LeftBox/LeftBox';
 import MiddleBox from './MiddleBox/MiddleBox';

@@ -1,3 +1,4 @@
+import React from 'react';
 import './SiteNameBox.css';
 function SiteNameBox() {
     return(
