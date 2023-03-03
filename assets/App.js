@@ -1,17 +1,13 @@
-// import logo from './logo.svg';
-import './App.css';
-import BottomBox from './BottomBox/BottomBox';
-import CenterBox from './CenterBox/CenterBox';
-import TopBox from './TopBox/TopBox';
+// assets/app.js
+import { registerReactControllerComponents } from '@symfony/ux-react';
 
-function App() {
-  return (
-    <div className="App">
-    <TopBox></TopBox>
-    <CenterBox></CenterBox>
-    <BottomBox></BottomBox>
-    </div>
-  );
-}
-
-export default App;
+// Registers React controller components to allow loading them from Twig
+//
+// React controller components are components that are meant to be rendered
+// from Twig. These component then rely on other components that won't be called
+// directly from Twig.
+//
+// By putting only controller components in `react/controllers`, you ensure that
+// internal components won't be automatically included in your JS built file if
+// they are not necessary.
+registerReactControllerComponents(require.context('./react/controllers', true, /\.(j|t)sx?$/));
