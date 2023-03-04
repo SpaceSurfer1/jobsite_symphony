@@ -1,4 +1,10 @@
 .search-field{
     width: 500px;
-    height: 25px;
+    height: 30px;
+    background-color: rgb(50, 50, 50);
+    border: 1px solid black;
+    padding-left: 15px;
+    border-radius: 14px;
+    color: white;
+    font-size: 17px;
 }
