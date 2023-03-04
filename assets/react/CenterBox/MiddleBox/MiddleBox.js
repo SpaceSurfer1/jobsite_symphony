@@ -2,17 +2,18 @@ import React from 'react';
 import { useState } from 'react';
 import './MiddleBox.css';
 function MiddleBox() {
-    const [text, setText] = useState(0);
+    const [text, setText] = useState("bhupesh");
     
-    // () => {
-    //     fetch(`http://localhost:8000/lucky/number`)
-    //      .then((response) => console.log(response));
-    // }
+    const fetchData = () => {
+        fetch(`http://localhost:8000/lucky/number`)
+         .then((response) => {return response.json()})
+         .then(data => setText(data))
+    }
 
     return(
         <div className="middlebox">
-            {/* <h5>{text}</h5>
-            <button onClick={()=>setText(text+1)}>
+            <h5>{text}</h5>
+            {/* <button onClick={()=>setText(text+1)}>
                 Click me!
             </button> */}
             <div className="postboxdiv">
@@ -24,10 +25,7 @@ function MiddleBox() {
                     <button>Post</button>
                     {/* <button>Attach Image</button> */}
                 </form>
-                <button onClick={() => {
-        fetch(`http://localhost:8000/lucky/number`)
-         .then((response) => console.log(response));
-    }}>Fetch test</button>
+                <button onClick={fetchData()}>Fetch test</button>
             </div>
         </div>
     );
