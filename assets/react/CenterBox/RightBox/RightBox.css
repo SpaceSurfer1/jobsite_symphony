@@ -1,8 +1,14 @@
 .rightbox {
-    border: 1px none green;
+    /* border: 1px solid green; */
     height: 800px;
     width: 300px;
     margin: 10px 0px 0px 0px;
     background-color: rgb(29, 29, 33);
     border-radius: 10px;
     }
+
+    .rightbox ul{
+        list-style-type: none;
+        font-size: 25px;
+        padding-left: 0;
+        }

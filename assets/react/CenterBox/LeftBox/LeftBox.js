@@ -10,13 +10,13 @@ function LeftBox() {
         <div className="leftbox">
             <ul>
                 <li><span><FcHome/></span><Link to='/'>Home</Link></li>
-                <br/>
+                
                 <li><span><CgProfile/></span><Link to='myprofile'>My Profile</Link></li>
-                <br/>
+                
                 <li><span><TfiWrite/></span><Link to='myblogs'>My Blogs</Link></li>
-                <br/>
+                
                 <li><span><FaUserFriends/></span><Link to='topics'>Topics</Link></li>
-                <br/>
+                
                 <li><span><FaUserFriends/></span><Link to='connections'>Connections</Link></li>
             </ul>
         </div>

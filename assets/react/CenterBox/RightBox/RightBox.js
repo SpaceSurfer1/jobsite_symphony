@@ -3,7 +3,15 @@ import './RightBox.css';
 function RightBox() {
     return(
         <div className="rightbox">
-            <h2>Trending</h2>
+            <h4>Trending</h4>
+            <ul>
+                <li>#geopolitics</li>
+                <li>#geopolitics</li>
+                <li>#geopolitics</li>
+                <li>#geopolitics</li>
+                <li>#geopolitics</li>
+                <li>#geopolitics</li>
+            </ul>
         </div>
     );
     
