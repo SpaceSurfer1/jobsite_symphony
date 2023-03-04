@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './MiddleBox.css';
 function MiddleBox() {
-    const [text, setText] = useState("bhupesh");
+    const [text, setText] = useState(0);
     
     // () => {
     //     fetch(`http://localhost:8000/lucky/number`)
@@ -11,10 +11,10 @@ function MiddleBox() {
 
     return(
         <div className="middlebox">
-            {/* <h5>PostBox</h5> */}
-            {/* <button onClick={()=>setText("Mishra")}>
+            <h5>{text}</h5>
+            <button onClick={()=>setText(text+1)}>
                 Click me!
-            </button> */}
+            </button>
             <div className="postboxdiv">
                 <form>
                     <textarea className="post-field"rows={6}cols={40}>
