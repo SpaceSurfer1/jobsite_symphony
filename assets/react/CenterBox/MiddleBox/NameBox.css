@@ -1,7 +1,8 @@
 .namebox{
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
     float: left;
-    width: 500px;
+    /* width: 500px; */
     height: 100px;
     margin: 150px 0px 0px 20px;
+    color: lightgrey;
 }

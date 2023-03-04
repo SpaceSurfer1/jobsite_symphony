@@ -5,7 +5,7 @@ function NameBox() {
     
     return(
         <div className="namebox">
-            
+            <h5>Bhupesh Mishra</h5>
         </div>
     );
     
