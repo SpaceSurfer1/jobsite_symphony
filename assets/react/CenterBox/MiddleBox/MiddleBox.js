@@ -11,10 +11,10 @@ function MiddleBox() {
 
     return(
         <div className="middlebox">
-            <h5>{text}</h5>
+            {/* <h5>{text}</h5>
             <button onClick={()=>setText(text+1)}>
                 Click me!
-            </button>
+            </button> */}
             <div className="postboxdiv">
                 <form>
                     <textarea className="post-field"rows={6}cols={40}>

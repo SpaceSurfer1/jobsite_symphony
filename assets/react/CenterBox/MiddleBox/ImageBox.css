@@ -1,0 +1,7 @@
+.imagebox{
+    border: 1px solid grey;
+    float: left;
+    width: 200px;
+    height: 250px;
+    margin: 20px 0px 0px 20px;
+}

@@ -1,17 +1,16 @@
 import React from 'react';
 import { useState } from 'react';
+import AboutBox from './AboutBox';
+import ImageBox from './ImageBox';
 import './MiddleBoxMyProfile.css';
+import NameBox from './NameBox';
 function MiddleBoxMyProfile() {
-    const [text, setText] = useState(0);
     
-    // () => {
-    //     fetch(`http://localhost:8000/lucky/number`)
-    //      .then((response) => console.log(response));
-    // }
-
     return(
         <div className="middlebox">
-            Yo
+            <ImageBox></ImageBox>
+            <NameBox></NameBox>
+            <AboutBox></AboutBox>
         </div>
     );
     
