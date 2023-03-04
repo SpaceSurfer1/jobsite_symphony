@@ -15,6 +15,8 @@ function LeftBox() {
                 <br/>
                 <li><span><TfiWrite/></span><Link to='myblogs'>My Blogs</Link></li>
                 <br/>
+                <li><span><FaUserFriends/></span><Link to='topics'>Topics</Link></li>
+                <br/>
                 <li><span><FaUserFriends/></span><Link to='connections'>Connections</Link></li>
             </ul>
         </div>
