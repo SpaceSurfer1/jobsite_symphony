@@ -9,6 +9,10 @@
 
     .rightbox ul{
         list-style-type: none;
-        font-size: 25px;
+        font-size: 21px;
         padding-left: 0;
         }
+
+        .rightbox ul li{
+            margin-bottom: 20px;
+            }

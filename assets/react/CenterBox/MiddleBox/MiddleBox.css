@@ -6,20 +6,3 @@
     background-color: rgb(29, 29, 33);
     border-radius: 10px;
 }
-.postboxdiv{
-    /* border: 1px solid black; */
-    background-color: rgb(39, 39, 43);
-    padding: 80px 0px 40px 0px;
-    margin: 40px 200px 0px 200px;
-    border-radius: 15px;
-}
-.post-field{
-    background-color: rgb(29, 29, 33);
-    border: 1px none black;
-    color: darkgreen;
-    font-size: 17px;
-    font-weight: bold;
-    padding: 20px 20px 20px 20px;
-    resize: none;
-    border-radius: 15px;
-}

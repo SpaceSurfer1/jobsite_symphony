@@ -7,7 +7,7 @@ import NameBox from './NameBox';
 function MiddleBoxMyProfile() {
     
     return(
-        <div className="middlebox">
+        <div className="middlebox-myprofile">
             <ImageBox></ImageBox>
             <NameBox></NameBox>
             <AboutBox></AboutBox>
