@@ -5,3 +5,11 @@
     height: 450px;
     margin: 40px 40px 0px 20px;
 }
+.aboutbox strong{
+    float: left;
+    font-size: 15px;
+}
+.aboutbox p{
+    float: left;
+    font-size: 15px;
+}

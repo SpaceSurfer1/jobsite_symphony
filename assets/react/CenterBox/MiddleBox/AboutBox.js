@@ -5,6 +5,10 @@ function AboutBox() {
     
     return(
         <div className="aboutbox">
+            <strong>About:</strong><p>babdjkaksbkjdbkjasjkbd</p>
+            <strong>About:</strong><p>babdjkaksbkjdbkjasjkbd</p>
+            <strong>About:</strong><p>babdjkaksbkjdbkjasjkbd</p>
+            <strong>About:</strong><p>babdjkaksbkjdbkjasjkbd</p>
             
         </div>
     );
