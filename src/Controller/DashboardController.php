@@ -8,9 +8,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DashboardController extends AbstractController
 {
-    /**
-     * @Route("/{reactRouting}",name="index",defaults={"reactRouting":null})
-     */
+    #[Route(path: '/dash', name: 'dash')]
+    // /**
+    //  * @Route("/{reactRouting}",name="index",defaults={"reactRouting":null})
+    //  */
     public function dashboard(): Response
     {
         // $number = random_int(0, 100);
