@@ -8,7 +8,7 @@ function MiddleBox() {
     return(
         <div className="middlebox">
                 <Routes>
-                    <Route path='/' element={<MiddleBoxHomePage/>}></Route>
+                    <Route path='dash' element={<MiddleBoxHomePage/>}></Route>
                     <Route path='myprofile' element={<MiddleBoxMyProfile/>}></Route>
                 </Routes>
         </div>
