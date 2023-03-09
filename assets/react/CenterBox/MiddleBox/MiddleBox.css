@@ -1,8 +1,9 @@
 .middlebox {
-    border: 2px solid black;
-    height: 850px;
+    /* border: 2px solid black; */
+    /* height: 850px; */
     width: 1000px;
     margin: 10px 0px 0px 0px;
+    padding-bottom: 100px;
     background-color: rgb(29, 29, 33);
     border-radius: 10px;
 }

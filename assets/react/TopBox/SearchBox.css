@@ -1,10 +1,14 @@
+/* .searchbox{
+    margin: 0 auto;
+    display: block;
+} */
 .search-field{
     width: 500px;
     height: 40px;
     background-color: rgb(50, 50, 50);
-    border: 1px solid black;
+    border: 2px none black;
     padding-left: 15px;
-    border-radius: 17px;
+    border-radius: 22px;
     color: white;
     font-size: 17px;
     margin: 0px 10px 0px 0px;

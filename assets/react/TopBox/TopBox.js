@@ -1,4 +1,5 @@
 import React from 'react';
+import ProfileCircle from './ProfileCircle';
 import SearchBox from './SearchBox';
 import SiteNameBox from './SiteNameBox';
 import './TopBox.css';
@@ -13,9 +14,10 @@ function TopBox() {
         <div className="topbox">
             <SiteNameBox></SiteNameBox>
             <SearchBox></SearchBox>
+            <ProfileCircle></ProfileCircle>
             {/* <TopOptionsBox></TopOptionsBox> */}
-            <p>{isAuthenticated}</p>
-            <a href="http://localhost:8000/logout">Logout</a>
+            {/* <p>{isAuthenticated}</p> */}
+            {/* <a href="http://localhost:8000/logout">Logout</a> */}
         </div>
     );
     
