@@ -15,6 +15,9 @@ class DashboardController extends AbstractController
     public function dashboard(): Response
     {
         // $number = random_int(0, 100);
+        if (!$this->getUser()) {
+            return $this->redirectToRoute('app_login');
+        }
 
         return $this->Render('dashboard/index.html.twig');
     }

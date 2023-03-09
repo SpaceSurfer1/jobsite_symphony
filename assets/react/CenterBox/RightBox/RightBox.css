@@ -1,6 +1,6 @@
 .rightbox {
-    /* border: 1px solid green; */
-    height: 800px;
+    border: 2px solid black;
+    height: 600px;
     width: 300px;
     margin: 10px 0px 0px 0px;
     background-color: rgb(29, 29, 33);

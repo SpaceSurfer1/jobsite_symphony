@@ -13,7 +13,7 @@ function LeftBox() {
                 
                 <li><span><CgProfile/></span><Link to='myprofile'>My Profile</Link></li>
                 
-                <li><span><TfiWrite/></span><Link to='myblogs'>My Blogs</Link></li>
+                <li><span><TfiWrite/></span><Link to='myblogs'>My Writings</Link></li>
                 
                 <li><span><FaUserFriends/></span><Link to='topics'>Topics</Link></li>
                 

@@ -11,7 +11,7 @@ function MiddleBoxHomePage() {
 
     return(
         <div className="middlebox-homepage">
-            <h5>{text}</h5>
+            {/* <h5>{text}</h5> */}
             {/* <button onClick={()=>setText(text+1)}>
                 Click me!
             </button> */}
@@ -24,7 +24,7 @@ function MiddleBoxHomePage() {
                     <button>Post</button>
                     {/* <button>Attach Image</button> */}
                 </form>
-                <button onClick={() => {
+                {/* <button onClick={() => {
         fetch(`http://localhost:8000/lucky/number`)
          .then((response) => {return response.json()})
          .then(data => {if(text=="bhupesh")
@@ -32,7 +32,7 @@ function MiddleBoxHomePage() {
             else
             setText("bhupesh")
             })
-    }}>Fetch test</button>
+    }}>Fetch test</button> */}
             </div>
         </div>
     );

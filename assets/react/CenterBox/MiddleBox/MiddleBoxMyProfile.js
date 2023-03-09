@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import AboutBox from './AboutBox';
 import ImageBox from './ImageBox';
 import './MiddleBoxMyProfile.css';
