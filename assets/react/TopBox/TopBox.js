@@ -15,6 +15,7 @@ function TopBox() {
             <SearchBox></SearchBox>
             {/* <TopOptionsBox></TopOptionsBox> */}
             <p>{isAuthenticated}</p>
+            <a href="http://localhost:8000/logout">Logout</a>
         </div>
     );
     
