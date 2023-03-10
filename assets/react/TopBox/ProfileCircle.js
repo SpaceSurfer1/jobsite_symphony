@@ -30,7 +30,8 @@ window.onclick = function(event) {
         <div className="dropdown">
   <button onClick={myFunction} className="profilecircle">B</button>
   <div id="myDropdown" className="dropdown-content">
-    <a href="#home">{isAuthenticated}</a>
+    <a href="/myprofile">{isAuthenticated}</a>
+    <a href="/logout">Logout</a>
     {/* <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a> */}

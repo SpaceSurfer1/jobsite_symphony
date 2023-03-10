@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import './MiddleBox.css';
 import MiddleBoxHomePage from './MiddleBoxHomepage';
 import MiddleBoxMyProfile from './MiddleBoxMyProfile';
+import MiddleWrite from './MiddleWrite';
 function MiddleBox() {
     
     return(
@@ -10,7 +11,7 @@ function MiddleBox() {
                 <Routes>
                     <Route path='dash' element={<MiddleBoxHomePage/>}></Route>
                     <Route path='myprofile' element={<MiddleBoxMyProfile/>}></Route>
-                    <Route path='write' element={<MiddleBoxHomePage/>}></Route>
+                    <Route path='write' element={<MiddleWrite/>}></Route>
                 </Routes>
         </div>
     );
