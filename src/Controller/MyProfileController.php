@@ -20,7 +20,8 @@ class MyProfileController extends AbstractController
         }
         else
         {
-            return $this->redirectToRoute('dash');
+            // return $this->redirectToRoute('dash');
+            return $this->Render('myprofile/myprofile.html.twig');
         }
 
         // return $this->Render('dashboard/index.html.twig');

@@ -21,14 +21,20 @@ window.onclick = function(event) {
       }
     }
   }
+
+  const userRating = document.querySelector('#root');
+    var isAuthenticated = userRating.dataset.eventId;
+    console.log(isAuthenticated);
+
     return(
         <div className="dropdown">
   <button onClick={myFunction} className="profilecircle">B</button>
   <div id="myDropdown" className="dropdown-content">
+    <a href="#home">{isAuthenticated}</a>
     {/* <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a> */}
-    <LeftBox></LeftBox>
+    {/* <LeftBox></LeftBox> */}
   </div>
 </div>
     );
