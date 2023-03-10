@@ -10,6 +10,7 @@ function MiddleBox() {
                 <Routes>
                     <Route path='dash' element={<MiddleBoxHomePage/>}></Route>
                     <Route path='myprofile' element={<MiddleBoxMyProfile/>}></Route>
+                    <Route path='write' element={<MiddleBoxHomePage/>}></Route>
                 </Routes>
         </div>
     );

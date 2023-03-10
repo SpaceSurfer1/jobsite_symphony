@@ -1,10 +1,11 @@
 .profilecircle{
-    border: 2px solid lightgrey;
-    width: 50px;
-    height: 50px;
+    border: 4px solid lightgrey;
+    width: 45px;
+    height: 45px;
     border-radius: 50px;
     background-color: grey;
     cursor: pointer;
+    font-size: 18px;
 }
 .dropbtn {
     background-color: #3498DB;
