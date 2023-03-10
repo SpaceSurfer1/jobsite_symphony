@@ -4,7 +4,7 @@ import { FcHome } from "react-icons/fc";
 function SiteNameBox() {
     return(
         <div className="sitenamebox">
-            <span><FcHome/></span><h4>essay.com</h4>
+            <span><FcHome/></span><h4>EssayOpinion.com</h4>
         </div>
     );
     

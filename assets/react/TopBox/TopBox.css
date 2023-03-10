@@ -1,6 +1,7 @@
 .topbox {
     
-    /* border: 2px solid black; */
+    /* border: 2px darkblue;
+    border-style: solid none none none; */
     height: 70px;
     /* width: 100%; */
     background-color: rgb(29, 29, 33);
