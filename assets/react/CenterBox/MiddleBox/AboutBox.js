@@ -5,11 +5,19 @@ function AboutBox() {
     
     return(
         <div className="aboutbox">
-            <strong>About:</strong><p>babdjkaksbkjdbkjasjkbd</p>
-            <strong>About:</strong><p>babdjkaksbkjdbkjasjkbd</p>
-            <strong>About:</strong><p>babdjkaksbkjdbkjasjkbd</p>
-            <strong>About:</strong><p>babdjkaksbkjdbkjasjkbd</p>
-            
+            <div className="aboutbox1">
+                <strong>About:</strong><textarea rows={6}cols={40}>
+                    </textarea>
+            </div>
+            <div className="aboutbox1">
+                <strong>Education:</strong><input/>
+            </div>
+            <div className="aboutbox1">
+                <strong>Work:</strong><input/>
+            </div>
+            <div className="aboutbox1">
+                <strong>Interests:</strong><input/>
+            </div>
         </div>
     );
     
