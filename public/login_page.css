@@ -6,7 +6,57 @@ body {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    /* justify-content: center; */
+    justify-content:space-between ;
     font-size: calc(10px + 2vmin);
     color: white;
   }
+  .topbox {
+    
+    /* border: 2px darkblue;
+    border-style: solid none none none; */
+    height: 70px;
+    /* width: 100%; */
+    background-color: rgb(29, 29, 33);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.bottombox {
+    /* border: 2px solid black; */
+    height: 140px;
+    /* width: 100%; */
+    background-color: rgb(29, 29, 33);
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    }
+.loginbox{
+    border: 1px solid lightgrey;
+    height:500px;
+}
+.sitenamebox {
+    /* border: 2px solid rgb(73, 73, 78); */
+    height: 50px;
+    /* width: 100px; */
+    margin: 0px 0px 0px 0px;
+    background-color: rgb(56, 56, 60);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 0px 20px 0px 20px;
+    
+}
+.sitenamebox h4{
+    color: lightgrey;
+    /* border: 1px solid blue; */
+}
+.sitenamebox span{
+    /* border: 1px solid blue; */
+    margin-top: 4px;
+    margin-right: 5px;
+}

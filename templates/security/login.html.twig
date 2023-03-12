@@ -1,8 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Log in!{% endblock %}
+{% block stylesheets %}
+            <link href="{{ asset('login_page.css') }}" rel="stylesheet"/>
+        {% endblock %}
 
 {% block body %}
+<div class="topbox">
+            <div class="sitenamebox">
+            <span><FcCloseUpMode/></span><h4>EssayOpinion</h4>
+        </div>
+</div>
+<div class="loginbox">
 <form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -39,4 +48,11 @@
         Sign in
     </button>
 </form>
+</div>
+<div class="bottombox">
+            <p>about</p>
+            <p>jobs</p>
+            <p>about</p>
+            <p>about</p>
+        </div>
 {% endblock %}
