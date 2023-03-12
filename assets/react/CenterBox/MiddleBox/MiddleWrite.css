@@ -15,3 +15,9 @@
     resize: none;
     border-radius: 15px;
 }
+.post-field:focus { 
+    outline: none !important;
+    /* border:1px solid red; */
+    box-shadow: 0 0 5px #9ac5f3;
+  }
+

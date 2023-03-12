@@ -34,8 +34,9 @@ body {
     justify-content: space-around;
     }
 .loginbox{
-    border: 1px solid lightgrey;
+    /* border: 1px solid lightgrey; */
     height:500px;
+    background-color: rgb(29, 29, 33);
 }
 .sitenamebox {
     /* border: 2px solid rgb(73, 73, 78); */
