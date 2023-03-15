@@ -9,6 +9,9 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Entity\EssayPosts;
 use Doctrine\ORM\EntityManagerInterface;
 
+/**
+ * @Route("/api", name="api_")
+ */
 class EssayPostController extends AbstractController
 {
     #[Route('/essay/post', name: 'app_essay_post')]
@@ -24,11 +27,10 @@ class EssayPostController extends AbstractController
      */
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
-        // $entityManager = $this->getDoctrine()->getManager();
-  
         $essayPosts = new EssayPosts();
         $essayPosts->setEssay($request->request->get('essay-text'));
-        $essayPosts->setUser('BM');
+        $user_field = $this->getUser()->getUserIdentifier();
+        $essayPosts->setUser($user_field);
   
         $entityManager->persist($essayPosts);
         $entityManager->flush();

@@ -13,7 +13,7 @@ function MiddleWrite() {
         setIsSaving(true);
         let formData = new FormData();
         formData.append("essay-text", essay);
-        axios.post('/project', formData)
+        axios.post('/api/project', formData)
           .then(function (response) {
             Swal.fire({
                 icon: 'success',
@@ -33,7 +33,7 @@ function MiddleWrite() {
             });
             setIsSaving(false);
           });
-    }
+    };
 
 
 
