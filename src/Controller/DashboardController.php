@@ -8,7 +8,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DashboardController extends AbstractController
 {
-    #[Route(path: '/dash', name: 'dash')]
+    /**
+     * @Route("/{reactRouting}", name="app_home", requirements={"reactRouting"="^(?!api).+"}, defaults={"reactRouting": null})
+     */
     public function dashboard(): Response
     {
         if (!$this->getUser()) {
