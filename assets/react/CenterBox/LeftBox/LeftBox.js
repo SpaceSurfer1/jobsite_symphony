@@ -9,7 +9,7 @@ function LeftBox() {
     return(
         <div className="leftbox">
             <ul>
-                <li><span><FcHome/></span><Link to='dash'>Home</Link></li>
+                <li><span><FcHome/></span><Link to='dash'>Dashboard</Link></li>
                 
                 <li><span><CgProfile/></span><Link to='myprofile'>My Profile</Link></li>
 
