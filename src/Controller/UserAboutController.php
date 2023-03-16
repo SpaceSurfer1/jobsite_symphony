@@ -52,4 +52,14 @@ class UserAboutController extends AbstractController
         // return $this->json('Created new project successfully with id ' . $userAbout->getId());
         return $this->json('Created new project successfully with id ');
     }
+
+    /**
+     * @Route("/getproject", name="project_show", methods={"GET"})
+     */
+    public function show(): Response
+    {
+        $aboutText = $this->getUser()->getUserAbout()->getAbout();
+ 
+        return $this->json($aboutText);
+    }
 }

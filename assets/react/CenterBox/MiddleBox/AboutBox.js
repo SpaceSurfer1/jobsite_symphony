@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import './AboutBox.css';
 import Swal from 'sweetalert2';
 import axios from 'axios';
@@ -36,10 +36,26 @@ function AboutBox() {
     };
 
 
+
+    
+    const [project, setProject] = useState('')
+    useEffect(() => {
+        axios.get(`/api/getproject`)
+        .then(function (response) {
+          setProject(response.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }, [about])
+
+
+
+
     return(
         <div className="aboutbox">
             <div className="aboutbox1">
-                <strong>About:</strong><form><textarea rows={6}cols={40} value={about} onChange={(event)=>{setAbout(event.target.value)}} name="about-text">
+                <strong>About:</strong><p>{project}</p><form><textarea rows={6}cols={40} value={about} onChange={(event)=>{setAbout(event.target.value)}} name="about-text">
                     </textarea><button disabled={isSaving} onClick={handleSave} type="button">Save</button></form>
             </div>
             <div className="aboutbox1">
