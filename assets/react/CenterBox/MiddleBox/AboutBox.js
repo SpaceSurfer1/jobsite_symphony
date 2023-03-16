@@ -21,6 +21,7 @@ function AboutBox() {
                 showConfirmButton: false,
                 timer: 1500
             });
+            setStuff(false);
             setIsSaving(false);
             setAbout('');
           })
@@ -38,7 +39,7 @@ function AboutBox() {
 
 
     
-    const [project, setProject] = useState('')
+    const [project, setProject] = useState('');
     useEffect(() => {
         axios.get(`/api/getproject`)
         .then(function (response) {
@@ -47,7 +48,13 @@ function AboutBox() {
         .catch(function (error) {
           console.log(error);
         });
-    }, [about])
+    }, [about]);
+
+
+    const [stuff, setStuff] = useState(false);
+    const showEditField = () => {
+        setStuff(true);
+    };
 
 
 
@@ -55,8 +62,16 @@ function AboutBox() {
     return(
         <div className="aboutbox">
             <div className="aboutbox1">
-                <strong>About:</strong><p>{project}</p><form><textarea rows={6}cols={40} value={about} onChange={(event)=>{setAbout(event.target.value)}} name="about-text">
-                    </textarea><button disabled={isSaving} onClick={handleSave} type="button">Save</button></form>
+                <strong>About:</strong>
+                {!stuff &&
+                    <>
+                    <p>{project}</p>
+                    <button onClick={showEditField}>Edit</button>
+                    </>
+                }
+                {stuff &&
+                    <form><textarea rows={6}cols={40} value={about} onChange={(event)=>{setAbout(event.target.value)}} name="about-text"></textarea><button disabled={isSaving} onClick={handleSave} type="button">Save</button></form>
+                }
             </div>
             <div className="aboutbox1">
                 <strong>Education:</strong><input/>
