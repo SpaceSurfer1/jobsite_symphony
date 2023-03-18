@@ -21,7 +21,7 @@ function AboutBoxAboutText() {
                 showConfirmButton: false,
                 timer: 1500
             });
-            setIsSavedAbout(true);
+            setIsSavedAbout(!isSavedAbout);
             setEditabout(false);
             setIsSaving(false);
             setAbout('');
@@ -39,9 +39,6 @@ function AboutBoxAboutText() {
 
     
 
-
-
-    
     const [aboutfetched, setAboutfetched] = useState('');
     useEffect(() => {
         axios.get(`/api/getabout`)
@@ -60,6 +57,9 @@ function AboutBoxAboutText() {
     const showAboutEditField = () => {
         setEditabout(true);
     };
+    const cancelAboutEditField = () => {
+        setEditabout(false);
+    };
 
 
     return(
@@ -76,6 +76,7 @@ function AboutBoxAboutText() {
                 <form>
                     <textarea rows={6}cols={40} value={about} onChange={(event)=>{setAbout(event.target.value)}} name="about-text"></textarea>
                     <button disabled={isSaving} onClick={handleSaveAbout} type="button">Save</button>
+                    <button onClick={cancelAboutEditField}>Cancel</button>
                 </form>
             }
         </div>
