@@ -26,7 +26,6 @@ class EssayGetController extends AbstractController
     public function showMyEssay(EssayPostsRepository $essayPostsRepository): Response
     {
         $myEssayText = $essayPostsRepository->findByExampleField($this->getUser());
-        // $myEssayText = $this->getUser()->getUserEssay();
         $result = [];
         foreach($myEssayText as $eachEssayPostRow){
 
