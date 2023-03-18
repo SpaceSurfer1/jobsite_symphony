@@ -68,8 +68,8 @@ function AboutBoxAboutText() {
             <strong>About:</strong>
             {!editabout &&
                 <>
-                    <p>{aboutfetched}</p>
-                    <button onClick={showAboutEditField}>Edit</button>
+                    <p className='about-text'>{aboutfetched}</p>
+                    <button className='about-text-edit-button' onClick={showAboutEditField}>Edit</button>
                 </>
             }
             {editabout &&
