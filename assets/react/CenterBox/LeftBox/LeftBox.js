@@ -15,11 +15,11 @@ function LeftBox() {
 
                 <li><span><TfiWrite/></span><Link to='myessays'>My Essays</Link></li>
 
-                <li><span><TfiWrite/></span><Link to='write'>New Slate</Link></li>
+                <li><span><TfiWrite/></span><Link to='write'>Write New</Link></li>
                 
                 <li><span><FaUserFriends/></span><Link to='topics'>Topics</Link></li>
                 
-                <li><span><FaUserFriends/></span><Link to='connections'>Community</Link></li>
+                {/* <li><span><FaUserFriends/></span><Link to='connections'>Community</Link></li> */}
             </ul>
         </div>
     );

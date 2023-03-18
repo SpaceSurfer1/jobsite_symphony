@@ -16,8 +16,10 @@ class EssayPosts
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $essay = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $user = null;
+    #[ORM\ManyToOne(inversedBy: 'userEssay')]
+    private ?User $user = null;
+
+    
 
     public function getId(): ?int
     {
@@ -36,15 +38,17 @@ class EssayPosts
         return $this;
     }
 
-    public function getUser(): ?string
+    public function getUser(): ?User
     {
         return $this->user;
     }
 
-    public function setUser(string $user): self
+    public function setUser(?User $user): self
     {
         $this->user = $user;
 
         return $this;
     }
+
+    
 }

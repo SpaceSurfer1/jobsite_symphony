@@ -3,27 +3,33 @@ import { useState, useEffect} from 'react';
 import './AboutBox.css';
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import AboutBoxAboutText from './AboutBoxAboutText';
 function AboutBox() {
     
-    const [about, setAbout] = useState('');
+    
     const [isSaving, setIsSaving] = useState(false);
+    
+    
 
+    const [education, setEducation] = useState('');
+    const [isSavedEducation, setIsSavedEducation] = useState(false);
 
-    const handleSave = () => {
+    const handleSaveEducation = () => {
         setIsSaving(true);
         let formData = new FormData();
-        formData.append("about-text", about);
-        axios.post('/api/userabout', formData)
+        formData.append("education-text", education);
+        axios.post('/api/setusereducation', formData)
           .then(function (response) {
             Swal.fire({
                 icon: 'success',
-                title: 'User about text saved successfully!',
+                title: 'User education text saved successfully!',
                 showConfirmButton: false,
                 timer: 1500
             });
-            setStuff(false);
+            setIsSavedEducation(true);
+            setEditeducation(false);
             setIsSaving(false);
-            setAbout('');
+            setEducation('');
           })
           .catch(function (error) {
             Swal.fire({
@@ -39,21 +45,25 @@ function AboutBox() {
 
 
     
-    const [project, setProject] = useState('');
+    
+
+    const [educationfetched, setEducationfetched] = useState('');
     useEffect(() => {
-        axios.get(`/api/getproject`)
+        axios.get(`/api/geteducation`)
         .then(function (response) {
-          setProject(response.data);
+            setEducationfetched(response.data);
+            setIsSavedEducation(false);
         })
         .catch(function (error) {
           console.log(error);
         });
-    }, [about]);
+    }, [isSavedEducation]);
 
 
-    const [stuff, setStuff] = useState(false);
-    const showEditField = () => {
-        setStuff(true);
+
+    const [editeducation, setEditeducation] = useState(false);
+    const showEducationEditField = () => {
+        setEditeducation(true);
     };
 
 
@@ -61,20 +71,21 @@ function AboutBox() {
 
     return(
         <div className="aboutbox">
+            {/* <AboutBoxAboutText></AboutBoxAboutText> */}
             <div className="aboutbox1">
-                <strong>About:</strong>
-                {!stuff &&
+                <strong>Education:</strong>
+                {!editeducation &&
                     <>
-                    <p>{project}</p>
-                    <button onClick={showEditField}>Edit</button>
+                        <p>{educationfetched}</p>
+                        <button onClick={showEducationEditField}>Edit</button>
                     </>
                 }
-                {stuff &&
-                    <form><textarea rows={6}cols={40} value={about} onChange={(event)=>{setAbout(event.target.value)}} name="about-text"></textarea><button disabled={isSaving} onClick={handleSave} type="button">Save</button></form>
+                {editeducation &&
+                    <form>
+                        <textarea rows={6}cols={40} value={education} onChange={(event)=>{setEducation(event.target.value)}} name="education-text"></textarea>
+                        <button disabled={isSaving} onClick={handleSaveEducation} type="button">Save</button>
+                    </form>
                 }
-            </div>
-            <div className="aboutbox1">
-                <strong>Education:</strong><input/>
             </div>
             <div className="aboutbox1">
                 <strong>Work:</strong><input/>

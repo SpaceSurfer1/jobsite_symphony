@@ -1,9 +1,9 @@
 import React from 'react';
-import './MiddleBoxHomePage.css';
-function MiddleBoxHomePage() {
+import './MiddleBoxMyEssays.css';
+function MiddleBoxMyEssays() {
 
     return(
-        <div className="middlebox-homepage">
+        <div className="middlebox-myessays">
             
             <div className="postboxdiv">
                 
@@ -21,4 +21,4 @@ function MiddleBoxHomePage() {
     );
     
 }
-export default MiddleBoxHomePage;
+export default MiddleBoxMyEssays;

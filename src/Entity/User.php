@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -35,6 +37,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\OneToOne(mappedBy: 'user', cascade: ['persist', 'remove'])]
     private ?UserAbout $userAbout = null;
+
+    #[ORM\OneToMany(mappedBy: 'user', targetEntity: EssayPosts::class)]
+    private Collection $userEssay;
+
+    public function __construct()
+    {
+        $this->userEssay = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -131,6 +141,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         }
 
         $this->userAbout = $userAbout;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, EssayPosts>
+     */
+    public function getUserEssay(): Collection
+    {
+        return $this->userEssay;
+    }
+
+    public function addUserEssay(EssayPosts $userEssay): self
+    {
+        if (!$this->userEssay->contains($userEssay)) {
+            $this->userEssay->add($userEssay);
+            $userEssay->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUserEssay(EssayPosts $userEssay): self
+    {
+        if ($this->userEssay->removeElement($userEssay)) {
+            // set the owning side to null (unless already changed)
+            if ($userEssay->getUser() === $this) {
+                $userEssay->setUser(null);
+            }
+        }
 
         return $this;
     }

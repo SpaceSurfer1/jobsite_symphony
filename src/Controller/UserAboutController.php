@@ -23,15 +23,18 @@ class UserAboutController extends AbstractController
     }
 
     /**
-     * @Route("/userabout", name="project_new", methods={"POST"})
+     * @Route("/setuserabout", name="set_user_about", methods={"POST"})
      */
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+    public function saveUserAbout(Request $request, EntityManagerInterface $entityManager): Response
     {
         
         if(!$this->getUser()->getUserAbout())
         {
             $userAbout = new UserAbout();
-            $userAbout->setUser($this->getUser());
+            if(!$userAbout->getUser())
+            {
+                $userAbout->setUser($this->getUser());
+            }
             $userAbout->setAbout($request->request->get('about-text'));
 
             $entityManager->persist($userAbout);
@@ -39,11 +42,10 @@ class UserAboutController extends AbstractController
         }
         elseif($this->getUser()->getUserAbout())
         {
-            $userAboutz = $this->getUser()->getUserAbout();
-            $userAboutz->setAbout($request->request->get('about-text'));
-            // $this->getUser()->setUserAbout($userAboutz);
+            $userAbout = $this->getUser()->getUserAbout();
+            $userAbout->setAbout($request->request->get('about-text'));
 
-            $entityManager->persist($userAboutz);
+            $entityManager->persist($userAbout);
             $entityManager->flush();
         }
   
@@ -53,13 +55,58 @@ class UserAboutController extends AbstractController
         return $this->json('Created new project successfully with id ');
     }
 
+
     /**
-     * @Route("/getproject", name="project_show", methods={"GET"})
+     * @Route("/setusereducation", name="set_user_education", methods={"POST"})
      */
-    public function show(): Response
+    public function saveUserEducation(Request $request, EntityManagerInterface $entityManager): Response
+    {
+        
+        if(!$this->getUser()->getUserAbout())
+        {
+            $userAbout = new UserAbout();
+            if(!$userAbout->getUser())
+            {
+                $userAbout->setUser($this->getUser());
+            }
+            $userAbout->setEducation($request->request->get('education-text'));
+
+            $entityManager->persist($userAbout);
+            $entityManager->flush();
+        }
+        elseif($this->getUser()->getUserAbout())
+        {
+            $userAbout = $this->getUser()->getUserAbout();
+            $userAbout->setEducation($request->request->get('education-text'));
+
+            $entityManager->persist($userAbout);
+            $entityManager->flush();
+        }
+  
+        
+  
+        // return $this->json('Created new project successfully with id ' . $userAbout->getId());
+        return $this->json('Created new project successfully with id ');
+    }
+
+
+    /**
+     * @Route("/getabout", name="get_about", methods={"GET"})
+     */
+    public function showAbout(): Response
     {
         $aboutText = $this->getUser()->getUserAbout()->getAbout();
  
         return $this->json($aboutText);
+    }
+
+    /**
+     * @Route("/geteducation", name="get_education", methods={"GET"})
+     */
+    public function showEducation(): Response
+    {
+        $educationText = $this->getUser()->getUserAbout()->getEducation();
+ 
+        return $this->json($educationText);
     }
 }
