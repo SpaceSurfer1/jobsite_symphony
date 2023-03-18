@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\EssayPostsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -22,9 +23,10 @@ class EssayGetController extends AbstractController
     /**
      * @Route("/getmyessay", name="get_my_essay", methods={"GET"})
      */
-    public function showMyEssay(): Response
+    public function showMyEssay(EssayPostsRepository $essayPostsRepository): Response
     {
-        $myEssayText = $this->getUser()->getUserEssay();
+        $myEssayText = $essayPostsRepository->findByExampleField($this->getUser());
+        // $myEssayText = $this->getUser()->getUserEssay();
         $result = [];
         foreach($myEssayText as $eachEssayPostRow){
 

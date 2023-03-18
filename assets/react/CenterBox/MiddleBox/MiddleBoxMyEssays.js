@@ -8,7 +8,7 @@ function MiddleBoxMyEssays() {
     useEffect(() => {
         axios.get(`/api/getmyessay`)
         .then(function (response) {
-            setMyessay(response[0]);
+            setMyessay(response.data);
         })
         .catch(function (error) {
           console.log(error);
@@ -18,19 +18,15 @@ function MiddleBoxMyEssays() {
 
     return(
         <div className="middlebox-myessays">
+            {Object.values(myessay).map((eachessay) => (
+               <div className="postboxdiv">
+               <p>{eachessay}</p>
+               </div>
+            ))}
+                
+                    
+                
             
-            <div className="postboxdiv">
-                <p>{myessay}</p>
-            </div>
-            <div className="postboxdiv">
-                
-            </div>
-            <div className="postboxdiv">
-                
-            </div>
-            <div className="postboxdiv">
-                
-            </div>
         </div>
     );
     

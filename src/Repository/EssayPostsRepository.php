@@ -39,6 +39,21 @@ class EssayPostsRepository extends ServiceEntityRepository
         }
     }
 
+    /**
+    * @return EssayPosts[] Returns an array of EssayPosts objects
+    */
+   public function findByExampleField($value): array
+   {
+       return $this->createQueryBuilder('e')
+           ->where('e.user = :val')
+           ->setParameter('val', $value)
+           ->orderBy('e.id', 'ASC')
+           ->setMaxResults(4)
+           ->getQuery()
+           ->getResult()
+       ;
+   }
+
 //    /**
 //     * @return EssayPosts[] Returns an array of EssayPosts objects
 //     */
