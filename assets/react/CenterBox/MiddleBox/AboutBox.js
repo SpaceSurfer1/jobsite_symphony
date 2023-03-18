@@ -71,7 +71,7 @@ function AboutBox() {
 
     return(
         <div className="aboutbox">
-            {/* <AboutBoxAboutText></AboutBoxAboutText> */}
+            <AboutBoxAboutText></AboutBoxAboutText>
             <div className="aboutbox1">
                 <strong>Education:</strong>
                 {!editeducation &&
