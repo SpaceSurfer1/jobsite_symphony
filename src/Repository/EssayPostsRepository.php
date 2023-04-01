@@ -42,17 +42,34 @@ class EssayPostsRepository extends ServiceEntityRepository
     /**
     * @return EssayPosts[] Returns an array of EssayPosts objects
     */
-   public function findByExampleField($value): array
+   public function myEssays($value, $offset): array
    {
        return $this->createQueryBuilder('e')
-           ->where('e.user = :val')
+           ->andwhere('e.user = :val')
            ->setParameter('val', $value)
-           ->orderBy('e.id', 'ASC')
-           ->setMaxResults(4)
+           ->andWhere('e.id < :vall')
+           ->setParameter('vall', $offset)
+           ->orderBy('e.id', 'DESC')
+           ->setMaxResults(5)
            ->getQuery()
            ->getResult()
        ;
    }
+
+   /**
+    * @return EssayPosts[] Returns an array of EssayPosts objects
+    */
+    public function allEssays($offset): array
+    {
+        return $this->createQueryBuilder('e')
+            ->andWhere('e.id < :vall')
+            ->setParameter('vall', $offset)
+            ->orderBy('e.id', 'DESC')
+            ->setMaxResults(5)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 
 //    /**
 //     * @return EssayPosts[] Returns an array of EssayPosts objects
