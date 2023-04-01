@@ -44,6 +44,7 @@ function MiddleBoxHomepage() {
                 return(
                <div className="postboxdiv" key={eachessay.id}>
                 <p>{eachessay.email}</p>
+                <p>{eachessay.essay_title}</p>
                 <p>{eachessay.id +". "+ eachessay.essay}</p>
                </div>);
                

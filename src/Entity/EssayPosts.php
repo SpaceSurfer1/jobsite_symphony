@@ -14,6 +14,9 @@ class EssayPosts
     private ?int $id = null;
 
     #[ORM\Column(length: 255, nullable: true)]
+    private ?string $essayTitle = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $essay = null;
 
     #[ORM\ManyToOne(inversedBy: 'userEssay')]
@@ -24,6 +27,18 @@ class EssayPosts
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getEssayTitle(): ?string
+    {
+        return $this->essayTitle;
+    }
+
+    public function setEssayTitle(?string $essayTitle): self
+    {
+        $this->essayTitle = $essayTitle;
+
+        return $this;
     }
 
     public function getEssay(): ?string

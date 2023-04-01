@@ -29,6 +29,7 @@ class EssayPostController extends AbstractController
     {
         $essayPosts = new EssayPosts();
         $essayPosts->setEssay($request->request->get('essay-text'));
+        $essayPosts->setEssayTitle($request->request->get('essay-title-text'));
         $user_field = $this->getUser();
         $essayPosts->setUser($user_field);
   

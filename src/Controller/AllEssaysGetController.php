@@ -35,6 +35,7 @@ class AllEssaysGetController extends AbstractController
             $result[$i]['essay'] = $eachEssayPostRow->getEssay();
             $result[$i]['id'] = $eachEssayPostRow->getId();
             $result[$i]['email'] = $eachEssayPostRow->getUser()->getEmail();
+            $result[$i]['essay_title'] = $eachEssayPostRow->getEssayTitle();
             $i++;
 
         }

@@ -6,6 +6,7 @@ import axios from 'axios';
 function MiddleWrite() {
 
     const [essay, setEssay] = useState('');
+    const [essayTitle, setEssayTitle] = useState('');
     const [isSaving, setIsSaving] = useState(false);
 
 
@@ -13,6 +14,7 @@ function MiddleWrite() {
         setIsSaving(true);
         let formData = new FormData();
         formData.append("essay-text", essay);
+        formData.append("essay-title-text", essayTitle);
         axios.post('/api/project', formData)
           .then(function (response) {
             Swal.fire({
@@ -41,6 +43,10 @@ function MiddleWrite() {
         <div className="middle-write">
             <div className="postboxdiv">
                 <form>
+                    <textarea className="post-field"rows={10}cols={40} value={essayTitle} onChange={(event)=>{setEssayTitle(event.target.value)}} name="essay-title-text">
+                    </textarea>
+                    <br/>
+                    <br/>
                     <textarea className="post-field"rows={26}cols={40} value={essay} onChange={(event)=>{setEssay(event.target.value)}} name="essay-text">
                     </textarea>
                     <br/>

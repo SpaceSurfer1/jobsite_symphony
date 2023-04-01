@@ -43,7 +43,8 @@ function MiddleBoxMyEssays() {
             {myessay.map((eachessay) => {
                 return(
                <div className="postboxdiv" key={eachessay.id}>
-               <p>{eachessay.id +". "+ eachessay.essay}</p>
+                <p>{eachessay.essay_title}</p>
+                <p>{eachessay.id +". "+ eachessay.essay}</p>
                </div>);
                
         })}
