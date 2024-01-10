@@ -41,6 +41,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'user', targetEntity: EssayPosts::class)]
     private Collection $userEssay;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $path;
+
     public function __construct()
     {
         $this->userEssay = new ArrayCollection();
@@ -171,6 +176,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $userEssay->setUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getPath(): ?string
+    {
+        return $this->path;
+    }
+
+    public function setPath(string $path): self
+    {
+        $this->path = $path;
 
         return $this;
     }

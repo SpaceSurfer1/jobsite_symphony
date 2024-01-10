@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './MiddleBoxHomepage.css';
+import logo from './logo.png';
+
 function MiddleBoxHomepage() {
 
     const [myessay, setMyessay] = useState([]);
@@ -46,6 +48,8 @@ function MiddleBoxHomepage() {
                 <p>{eachessay.email}</p>
                 <p>{eachessay.essay_title}</p>
                 <p>{eachessay.id +". "+ eachessay.essay}</p>
+                abcdjgasuasyd
+                <img src={logo} alt="Logo" />
                </div>);
                
         })}
