@@ -1,6 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './MiddleBoxMyEssays.css';
+import logo from './logo.png';
+import pic from './pic.jpeg';
+
 function MiddleBoxMyEssays() {
 
     const [myessay, setMyessay] = useState([]);
@@ -39,12 +42,28 @@ function MiddleBoxMyEssays() {
 
 
     return(
-        <div className="middlebox-myessays">
+        <div className="middlebox-allessays">
             {myessay.map((eachessay) => {
                 return(
-               <div className="postboxdiv" key={eachessay.id}>
-                <p>{eachessay.essay_title}</p>
-                <p>{eachessay.id +". "+ eachessay.essay}</p>
+               <div className="essayboxdiv" key={eachessay.id} style={{border:"1px solid black"}}>
+
+                <div style={{border:"1px none red",float:"left",width:"100%"}}>
+                    <img src={pic} alt="Logo" className="home-post-profile-pic"/>
+                    <p className="home-post-name">{eachessay.firstname} {eachessay.lastname}</p>
+                    <p className="home-post-time">{eachessay.time}</p>
+                </div>
+                <div>
+                    <p className="home-post-title"><b>{eachessay.essay_title}</b></p>
+                </div>
+                {/* <p className="home-post-email">{eachessay.email}</p> */}
+                <div>
+                    <p className="home-post-essay">{eachessay.id +". "+ eachessay.essay}</p>
+                </div>
+                
+                <div>
+                    <img src={logo} alt="Logo" className="home-post-image"/>
+                </div>
+                
                </div>);
                
         })}
