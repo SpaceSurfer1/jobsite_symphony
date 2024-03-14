@@ -1,7 +1,47 @@
-.postboxdiv{
-    /* border: 2px solid black; */
+.essayboxdiv{
+    border: 2px solid white;
     background-color: rgb(39, 39, 43);
-    padding: 80px 0px 80px 0px;
-    margin: 40px 100px 0px 100px;
+    padding: 20px 0px 80px 0px;
+    margin: 40px 200px 0px 200px;
     border-radius: 15px;
 }
+
+.home-post-profile-pic{
+    height: 50px;
+    width: 50px;
+    float: left;
+    border-radius: 40px;
+    margin: 0px 0px 0px 40px;
+}
+
+.home-post-name{
+    float: left;
+    font-size: 12px;
+    margin: 25px 0px 0px 20px;
+    font-weight: bold;
+}
+
+.home-post-email{
+    /* float: left; */
+}
+
+.home-post-title{
+    /* float: left; */
+}
+
+.home-post-essay{
+    /* float: left; */
+}
+
+.home-post-time{
+    float: right;
+    font-size: 12px;
+    margin: 20px 20px 0px 0px;
+}
+
+.home-post-image{
+    /* float: left; */
+    /* height: 500px; */
+    width: 500px;
+}
+
