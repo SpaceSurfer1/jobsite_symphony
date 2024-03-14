@@ -32,6 +32,7 @@ class EssayPostController extends AbstractController
         $essayPosts->setEssayTitle($request->request->get('essay-title-text'));
         $user_field = $this->getUser();
         $essayPosts->setUser($user_field);
+        $essayPosts->setTime(time());
   
         $entityManager->persist($essayPosts);
         $entityManager->flush();

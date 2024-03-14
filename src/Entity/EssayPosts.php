@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\EssayPostsRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: EssayPostsRepository::class)]
@@ -21,6 +22,9 @@ class EssayPosts
 
     #[ORM\ManyToOne(inversedBy: 'userEssay')]
     private ?User $user = null;
+
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    private ?\DateTimeInterface $time = null;
 
     
 
@@ -61,6 +65,19 @@ class EssayPosts
     public function setUser(?User $user): self
     {
         $this->user = $user;
+
+        return $this;
+    }
+
+    public function getTime(): ?\DateTimeInterface
+    {
+        return $this->time;
+    }
+
+    public function setTime(): self
+    {
+        // $this->time = $time;
+        $this->time = new \DateTime();
 
         return $this;
     }

@@ -45,9 +45,11 @@ function MiddleBoxHomepage() {
             {myessay.map((eachessay) => {
                 return(
                <div className="postboxdiv" key={eachessay.id}>
+                <p>{eachessay.firstname} {eachessay.lastname}</p>
                 <p>{eachessay.email}</p>
                 <p>{eachessay.essay_title}</p>
                 <p>{eachessay.id +". "+ eachessay.essay}</p>
+                <p>{eachessay.time}</p>
                 abcdjgasuasyd
                 <img src={logo} alt="Logo" />
                </div>);
