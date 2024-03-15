@@ -32,7 +32,7 @@ class EssayPostController extends AbstractController
         $logger->info('I just got the logger==========================');
         $logger->info($request->request->get('essay-text'));
         // print_r($request->request->get('essay-text'));
-        exit;
+        // exit;
         $essayPosts->setEssay($request->request->get('essay-text'));
         $essayPosts->setEssayTitle($request->request->get('essay-title-text'));
         $user_field = $this->getUser();

@@ -6,7 +6,7 @@ function SiteNameBox() {
     return(
         <div className="sitenamebox">
             {/* <span><FcCloseUpMode/></span><h4>EssayOpinion</h4> */}
-            <span><img src={pen} alt="Logo" className="home-post-image"/></span><h4>EssayOpinion</h4>
+            <span><img src={pen} alt="Logo" className="sitename-image"/></span><h4>EssayOpinion</h4>
         </div>
     );
     

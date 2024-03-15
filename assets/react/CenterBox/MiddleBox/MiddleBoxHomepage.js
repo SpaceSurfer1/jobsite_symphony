@@ -4,6 +4,8 @@ import './MiddleBoxHomepage.css';
 import logo from './logo.png';
 import pic from './pic.jpeg';
 
+import ReactHtmlParser from 'react-html-parser';
+
 function MiddleBoxHomepage() {
 
     const [myessay, setMyessay] = useState([]);
@@ -57,7 +59,8 @@ function MiddleBoxHomepage() {
                 </div>
                 {/* <p className="home-post-email">{eachessay.email}</p> */}
                 <div>
-                    <p className="home-post-essay">{eachessay.id +". "+ eachessay.essay}</p>
+                    {/* <p className="home-post-essay">{eachessay.id +". "+ ReactHtmlParser(eachessay.essay)}</p> */}
+                    <div dangerouslySetInnerHTML={{__html: eachessay.essay}}></div>
                 </div>
                 
                 <div>

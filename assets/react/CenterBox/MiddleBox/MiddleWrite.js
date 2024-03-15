@@ -3,11 +3,19 @@ import {useState} from 'react';
 import './MiddleWrite.css';
 import Swal from 'sweetalert2';
 import axios from 'axios';
+import MyEditor from './MyEditor';
+import MyQuillEditor from './MyQuillEditor';
+
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
+
 function MiddleWrite() {
 
     const [essay, setEssay] = useState('');
     const [essayTitle, setEssayTitle] = useState('');
     const [isSaving, setIsSaving] = useState(false);
+
+    const [value, setValue] = useState('');
 
 
     const handleSave = () => {
@@ -49,9 +57,12 @@ function MiddleWrite() {
                     </textarea>
                     <br/>
                     <br/>
-                    <textarea className="post-field"rows={26}cols={40} value={essay} onChange={(event)=>{setEssay(event.target.value)}} name="essay-text">
-                    </textarea>
+                    {/* <textarea className="post-field"rows={26}cols={40} value={essay} onChange={(event)=>{setEssay(event.target.value)}} name="essay-text"> */}
+                    {/* </textarea> */}
                     <br/>
+                    {/* <MyEditor/> */}
+                    {/* <MyQuillEditor></MyQuillEditor> */}
+                    <ReactQuill theme="snow" value={essay} onChange={setEssay} />
                     <button disabled={isSaving} onClick={handleSave} type="button">Post</button>
                 </form>
             </div>
