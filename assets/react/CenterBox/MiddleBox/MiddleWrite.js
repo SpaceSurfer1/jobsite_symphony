@@ -15,6 +15,8 @@ function MiddleWrite() {
         let formData = new FormData();
         formData.append("essay-text", essay);
         formData.append("essay-title-text", essayTitle);
+        // console.log('formData');
+        // console.log(formData);
         axios.post('/api/project', formData)
           .then(function (response) {
             Swal.fire({
